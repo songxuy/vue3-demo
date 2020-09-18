@@ -29,6 +29,10 @@ export default {
     watch(age, (newValue, oldValue) => {
       console.log(newValue, oldValue);
     });
+    const obj = {};
+    const state1 = reactive(obj);
+    // 输出false
+    console.log(obj === state1);
     return {
       state,
       changeName,
