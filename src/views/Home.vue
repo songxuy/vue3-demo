@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <img data-src="@/assets/logo.png" />
     <About msg="hello"></About>
     <a-form layout="inline" :model="state.form">
       <a-form-item>

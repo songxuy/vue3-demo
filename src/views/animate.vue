@@ -2,14 +2,16 @@
   <div class="animate">
     <!-- <div class="tab"> -->
     <a-tabs default-active-key="1" @change="callback">
-      <a-tab-pane key="1" tab="Tab 1"> </a-tab-pane>
-      <a-tab-pane key="2" tab="Tab 2" force-render> </a-tab-pane>
-      <a-tab-pane key="3" tab="Tab 3"> </a-tab-pane>
-      <a-tab-pane key="4" tab="Tab 4"> </a-tab-pane>
+      <a-tab-pane key="1" tab="交错列表"> </a-tab-pane>
+      <a-tab-pane key="2" tab="段落列表" force-render> </a-tab-pane>
+      <a-tab-pane key="3" tab="翻转列表"> </a-tab-pane>
+      <a-tab-pane key="4" tab="跟进列表"> </a-tab-pane>
     </a-tabs>
     <!-- </div> -->
     <div class="comp">
-      <component :is="view"></component>
+      <transition name="component-fade" mode="out-in">
+        <component :is="view"></component>
+      </transition>
     </div>
   </div>
 </template>
@@ -61,5 +63,13 @@ export default {
   position: relative;
   height: calc(100% - 62px);
   overflow-y: scroll;
+}
+.component-fade-enter-active,
+.component-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.component-fade-enter, .component-fade-leave-to
+/* .component-fade-leave-active for below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
