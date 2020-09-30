@@ -1,5 +1,5 @@
 <template>
-  <div class="animate">
+  <div class="animate3">
     <div class="pic"></div>
     <div class="flex">
       <div class="card"></div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="animate">
+  <div class="animate4">
     <div class="pic"></div>
     <div class="flex">
       <div class="card"></div>
@@ -37,11 +37,11 @@ export default {
       el.style.opacity = 0;
     };
     const enter = (el, done) => {
-      const delay = el.dataset.index * 100;
+      const delay = el.dataset.index * 200;
       setTimeout(() => {
         el.style.transition = 'opacity 0.4s ';
         el.style.opacity = 1;
-        el.style.animation = 'one-in 0.4s infinite';
+        el.style.animation = 'one-in4 0.4s infinite';
         el.style['animation-iteration-count'] = 1;
         done();
       }, delay);
