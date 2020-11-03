@@ -6333,7 +6333,7 @@ node-releases@^1.1.61:
   resolved "https://registry.npm.taobao.org/node-releases/download/node-releases-1.1.61.tgz?cache=0&sync_timestamp=1599612885196&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnode-releases%2Fdownload%2Fnode-releases-1.1.61.tgz#707b0fca9ce4e11783612ba4a2fcba09047af16e"
   integrity sha1-cHsPypzk4ReDYSukovy6CQR68W4=
 
-node-sass@^4.12.0:
+node-sass@^4.14.1:
   version "4.14.1"
   resolved "https://registry.npm.taobao.org/node-sass/download/node-sass-4.14.1.tgz#99c87ec2efb7047ed638fb4c9db7f3a42e2217b5"
   integrity sha1-mch+wu+3BH7WOPtMnbfzpC4iF7U=

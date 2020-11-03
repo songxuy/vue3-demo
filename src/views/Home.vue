@@ -23,6 +23,7 @@
         </a-button>
       </a-form-item>
     </a-form>
+    <a-button @click="goBack">test</a-button>
   </div>
 </template>
 <script>
@@ -51,10 +52,13 @@ export default {
     function handleSubmit() {
       console.log(state.form);
     }
-
+    function goBack() {
+      window.history.go(-1);
+    }
     return {
       state,
       handleSubmit,
+      goBack,
     };
   },
 };
