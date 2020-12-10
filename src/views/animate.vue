@@ -1,13 +1,11 @@
 <template>
   <div class="animate">
-    <!-- <div class="tab"> -->
     <a-tabs default-active-key="1" @change="callback">
       <a-tab-pane key="1" tab="交错列表"> </a-tab-pane>
       <a-tab-pane key="2" tab="段落列表" force-render> </a-tab-pane>
       <a-tab-pane key="3" tab="翻转列表"> </a-tab-pane>
       <a-tab-pane key="4" tab="跟进列表"> </a-tab-pane>
     </a-tabs>
-    <!-- </div> -->
     <div class="comp">
       <transition name="component-fade" mode="out-in">
         <component :is="view"></component>

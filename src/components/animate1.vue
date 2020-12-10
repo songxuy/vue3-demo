@@ -26,12 +26,13 @@
   </div>
 </template>
 <script>
-import { ref } from 'vue';
+import { ref, reactive } from 'vue';
 export default {
   setup() {
     const show1 = ref(false);
     const show2 = ref(false);
     const show3 = ref(false);
+    const test = reactive(0);
     const arr = ref([1, 2, 3, 4, 5, 6, 7, 8]);
     const beforeEnter = el => {
       el.style.opacity = 0;
@@ -61,6 +62,7 @@ export default {
       enter,
       beforeEnter,
       arr,
+      test,
     };
   },
 };

@@ -2,15 +2,18 @@
   <div class="demo">
     <Child v-model:value="state.value" v-model:title="state.title"></Child>
     <button @click="goHome">go home</button>
+    <TestDemo :msg="'helloworld'" />
   </div>
 </template>
 <script>
 import { reactive } from 'vue';
 import Child from './child';
+import TestDemo from '@/components/testDemo';
 import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
 export default {
   components: {
     Child,
+    TestDemo,
   },
   beforeRouteEnter(from, to, next) {
     console.log('enter');
