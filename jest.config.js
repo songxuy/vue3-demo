@@ -3,4 +3,6 @@ module.exports = {
   transform: {
     '^.+\\.vue$': 'vue-jest',
   },
+  collectCoverage: true,
+  collectCoverageFrom: ['src/components/*.vue'], //我只做components目录下vue文件测试
 };

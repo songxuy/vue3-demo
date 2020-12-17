@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-11-18 11:15:27
+ * @LastEditTime: 2020-12-10 16:26:20
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \my-vue3\src\views\Home.vue
+-->
 <template>
   <div class="home">
     <img data-src="@/assets/logo.png" />
@@ -31,6 +39,7 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons-vue';
 import { Form, Input, Button } from 'ant-design-vue';
 import { reactive } from 'vue';
 import About from '@/views/About';
+import axios from 'axios';
 export default {
   components: {
     UserOutlined,
@@ -48,7 +57,7 @@ export default {
         password: '',
       },
     });
-
+    axios.get('http://localhost:8090/submit');
     function handleSubmit() {
       console.log(state.form);
     }

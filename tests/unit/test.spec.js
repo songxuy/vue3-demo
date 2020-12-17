@@ -28,7 +28,7 @@ describe('prop 验证', () => {
 
 describe('检查接口', () => {
   it('检查接口', async () => {
-    let { data } = await Axios.get('http://192.168.1.145:3000/submit');
+    let { data } = await Axios.get('http://localhost:8090/submit');
     expect(data.code).toBe(200);
   });
 });

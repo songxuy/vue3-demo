@@ -6,12 +6,15 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "mock": "node ./mock.js"
   },
   "dependencies": {
     "ant-design-vue": "2.0.0-beta.6",
     "axios": "^0.21.0",
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
+    "mockjs": "^1.1.0",
     "sass-loader": "^8.0.2",
     "vue": "^3.0.0-0",
     "vue-router": "^4.0.0-0",

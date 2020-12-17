@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-09-10 14:24:54
- * @LastEditTime: 2020-10-13 15:28:12
+ * @LastEditTime: 2020-12-16 11:09:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \my-vue3\src\router\index.ts
@@ -62,6 +62,22 @@ const routes: Array<RouteRecordRaw> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/tabs.vue'),
+  },
+  {
+    path: '/cardzhihu',
+    name: 'cardzhihu',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/cardZhihu.vue'),
+  },
+  {
+    path: '/cardtantan',
+    name: 'cardtantan',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/cardTantan.vue'),
   },
 ];
 
