@@ -10,6 +10,7 @@
   <div class="home">
     <hello-world />
     <img data-src="@/assets/logo.png" />
+    hahaha
     <About msg="hello"></About>
     <a-form layout="inline" :model="state.form">
       <a-form-item>
