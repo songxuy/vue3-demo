@@ -60,7 +60,7 @@ export default defineComponent({
         password: '',
       },
     });
-    axios.get('http://localhost:8090/submit');
+    /* axios.get('http://localhost:8090/submit'); */
     function handleSubmit() {
       console.log(state.form);
     }
