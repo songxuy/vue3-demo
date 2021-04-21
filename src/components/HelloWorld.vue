@@ -1,5 +1,8 @@
 <template>
   <div class="hello">
+    <h1>{{ sayHello() }}</h1>
+    <h1>{{ name }}</h1>
+    <button @click="changeName">click</button>
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
@@ -93,17 +96,34 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, reactive, toRefs } from 'vue';
 
 export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: String,
   },
+  setup() {
+    const a = reactive({
+      name: 'sxy',
+      age: 20,
+    });
+    const changeName = (): void => {
+      a.name = 'xixixi';
+    };
+    const sayHello = (): string => {
+      return 'hello';
+    };
+    return {
+      ...toRefs(a),
+      changeName,
+      sayHello,
+    };
+  },
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Add "scoped" attribute to limit CSS to this  component only -->
 <style scoped lang="scss">
 h3 {
   margin: 40px 0 0;

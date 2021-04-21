@@ -8,6 +8,7 @@
 -->
 <template>
   <div class="home">
+    <hello-world />
     <img data-src="@/assets/logo.png" />
     <About msg="hello"></About>
     <a-form layout="inline" :model="state.form">
@@ -34,13 +35,14 @@
     <a-button @click="goBack">test</a-button>
   </div>
 </template>
-<script>
+<script lang="ts">
 import { UserOutlined, LockOutlined } from '@ant-design/icons-vue';
 import { Form, Input, Button } from 'ant-design-vue';
-import { reactive } from 'vue';
-import About from '@/views/About';
+import { reactive, defineComponent } from 'vue';
+import About from '@/views/About.vue';
 import axios from 'axios';
-export default {
+import HelloWorld from '@/components/HelloWorld.vue';
+export default defineComponent({
   components: {
     UserOutlined,
     LockOutlined,
@@ -49,6 +51,7 @@ export default {
     [Input.name]: Input,
     [Button.name]: Button,
     About,
+    HelloWorld,
   },
   setup() {
     const state = reactive({
@@ -70,5 +73,5 @@ export default {
       goBack,
     };
   },
-};
+});
 </script>
