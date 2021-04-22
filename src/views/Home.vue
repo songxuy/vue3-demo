@@ -1,16 +1,8 @@
-<!--
- * @Author: your name
- * @Date: 2020-11-18 11:15:27
- * @LastEditTime: 2020-12-10 16:26:20
- * @LastEditors: your name
- * @Description: In User Settings Edit
- * @FilePath: \my-vue3\src\views\Home.vue
--->
 <template>
   <div class="home">
     <hello-world />
     <img data-src="@/assets/logo.png" />
-    hahaha
+    xixixi
     <About msg="hello"></About>
     <a-form layout="inline" :model="state.form">
       <a-form-item>
