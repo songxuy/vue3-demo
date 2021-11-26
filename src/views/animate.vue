@@ -11,6 +11,7 @@
         <component :is="view"></component>
       </transition>
     </div>
+    <Dialog v-if="true"></Dialog>
   </div>
 </template>
 <script>
@@ -20,6 +21,7 @@ import Animate1 from '@/components/animate1';
 import Animate2 from '@/components/animate2';
 import Animate3 from '@/components/animate3';
 import Animate4 from '@/components/animate4';
+import Dialog from '@/components/dialog.vue';
 export default {
   components: {
     [Tabs.name]: Tabs,
@@ -28,6 +30,7 @@ export default {
     Animate2,
     Animate3,
     Animate4,
+    Dialog,
   },
   setup() {
     const view = ref('Animate1');

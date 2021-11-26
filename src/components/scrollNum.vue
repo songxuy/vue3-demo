@@ -46,7 +46,7 @@ export default {
     },
   },
   setup(props) {
-    const ua = navigator.userAgent.toLowerCase();
+    /* const ua = navigator.userAgent.toLowerCase();
     const testUA = regexp => regexp.test(ua);
     const isSafari = testUA(/safari/g) && !testUA(/chrome/g);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -65,7 +65,7 @@ export default {
       }, props.delay * 1000));
     return {
       ul,
-    };
+    }; */
   },
   beforeUnmount() {
     clearTimeout(this.timer);
